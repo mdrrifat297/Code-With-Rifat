@@ -12,16 +12,25 @@ body {
     color: #333;
 }
 
+
 /* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    display: flex;
+    align-items: center;  /* Vertically center items */
+    padding: 20px;
+    justify-content: flex-start;  /* Align all items to the left */
+}
+
+header .logo {
+    margin-right: 20px;  /* Space between logo and title */
 }
 
 header h1 {
     margin-bottom: 10px;
+}
+
+nav {
+    margin-left: auto;  /* Push the nav to the right */
 }
 
 nav ul {
@@ -58,6 +67,13 @@ main ul {
 main ul li {
     margin: 5px 0;
 }
+
+article {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
 
 /* Footer */
 footer {
@@ -133,6 +149,7 @@ footer {
     margin: 0;
     font-size: 14px;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
