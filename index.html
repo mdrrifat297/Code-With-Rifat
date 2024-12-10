@@ -28,6 +28,21 @@
             background-color: #f8f9fa;
             padding: 40px 20px;
         }
+        
+        #profile-links a:hover p {
+          color: #007bff;
+          transition: color 0.3s ease;
+        }
+        
+        #profile-links img {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+        
+        #profile-links img:hover {
+          transform: scale(1.1);
+        }
+
         footer {
             background-color: #343a40;
             color: white;
@@ -99,6 +114,49 @@
             </div>
         </div>
     </div>
+    
+    <!-- Profile Links Section -->
+    <section id="profile-links" style="background-color: #f8f9fa; padding: 40px 0;">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="color: #333; font-size: 28px; margin: 0;">My Programming Profiles</h2>
+        <p style="color: #666; font-size: 16px;">Check out my coding activity and achievements!</p>
+      </div>
+    
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <!-- Codeforces Profile -->
+        <div style="text-align: center; width: 120px;">
+          <a href="YOUR_CODEFORCES_LINK" target="_blank" style="text-decoration: none;">
+            <img src="assets/images/Codeforces.png" alt="Codeforces" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="margin-top: 10px; color: #333; font-weight: bold;">Codeforces</p>
+          </a>
+        </div>
+    
+        <!-- LeetCode Profile -->
+        <div style="text-align: center; width: 120px;">
+          <a href="YOUR_LEETCODE_LINK" target="_blank" style="text-decoration: none;">
+            <img src="assets/images/LeetCode.png" alt="LeetCode" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="margin-top: 10px; color: #333; font-weight: bold;">LeetCode</p>
+          </a>
+        </div>
+    
+        <!-- HackerRank Profile -->
+        <div style="text-align: center; width: 120px;">
+          <a href="YOUR_HACKERRANK_LINK" target="_blank" style="text-decoration: none;">
+            <img src="assets/images/HackerRank.png" alt="HackerRank" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="margin-top: 10px; color: #333; font-weight: bold;">HackerRank</p>
+          </a>
+        </div>
+    
+        <!-- CodeChef Profile -->
+        <div style="text-align: center; width: 120px;">
+          <a href="YOUR_CODECHEF_LINK" target="_blank" style="text-decoration: none;">
+            <img src="assets/images/Codechef.png" alt="CodeChef" style="width: 60px; height: 60px; border-radius: 50%;">
+            <p style="margin-top: 10px; color: #333; font-weight: bold;">CodeChef</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="text-light" style="background-color: #343a40; padding: 40px 0;">
