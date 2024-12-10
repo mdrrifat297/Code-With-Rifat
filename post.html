@@ -3,69 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code With Rifat/Post</title>
-    <link rel="icon" href="image/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Blog Posts - Code With Rifat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .post-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .post-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .post-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .post-item a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .post-item a:hover {
+            color: #0056b3;
+        }
+        .pagination {
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header style="background-color: rgb(142, 26, 97);">
-        <h1>Post</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="post.html">Post</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Code With Rifat</a>
+            <a href="#posts" class="btn btn-light">Posts</a>
+        </div>
+    </nav>
 
-    <!-- Main Content -->
-    <main>
-        <article>
-            <h2>Introduction</h2>
-            <p>This is the content of the blog post. Write your post content here.</p>
-    
-            <h3>Subheading 1</h3>
-            <p>More content under subheading 1.</p>
-    
-            <h3>Subheading 2</h3>
-            <p>More content under subheading 2.</p>
-    
-            <!-- Add more content as needed -->
-        </article>
-    </main>
+    <!-- Posts Section -->
+    <section id="posts" class="container my-5">
+        <h2 class="text-center mb-4">Latest Blog Posts</h2>
+        
+        <!-- Post Item 1 -->
+        <div class="post-item">
+            <h3><a href="post1.html">Understanding Data Structures</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, lorem nec fringilla...</p>
+            <a href="post/DataStructures.html">Read More</a>
+        </div>
+
+        <!-- Post Item 2 -->
+        <div class="post-item">
+            <h3><a href="post2.html">How to Build a Mobile App</a></h3>
+            <p>Curabitur pretium purus at egestas tincidunt. Integer ullamcorper, elit et suscipit interdum, dui...</p>
+            <a href="post2.html">Read More</a>
+        </div>
+
+        <!-- Post Item 3 -->
+        <div class="post-item">
+            <h3><a href="post3.html">Web Development Trends in 2024</a></h3>
+            <p>Sed auctor nulla vel velit tincidunt convallis. Ut molestie sollicitudin dolor, ac convallis felis...</p>
+            <a href="post3.html">Read More</a>
+        </div>
+
+        <!-- Post Item 4 -->
+        <div class="post-item">
+            <h3><a href="post4.html">The Future of Artificial Intelligence</a></h3>
+            <p>Donec vehicula lorem sed erat tempus, at tristique odio finibus. Curabitur nec efficitur libero...</p>
+            <a href="post4.html">Read More</a>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer style="background-color: rgb(86, 91, 29);">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h3>Code With Rifat</h3>
-                <p>Software Developer and Problem Solver.</p>
-            </div>
-            <div class="footer-middle">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="post.html">Post</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-right">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/mdrrifat297" class="social-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/mdrrifat297" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.x.com/mdrrifat297" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/mdrrifat297/" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Company Name. All rights reserved.</p>
-        </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Code With Rifat. All rights reserved.</p>
     </footer>
-    
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
