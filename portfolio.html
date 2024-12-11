@@ -1,207 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Code With Rifat</title>
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" type="image/png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .portfolio-item {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-        .portfolio-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .portfolio-item h5 {
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-        .portfolio-item p {
-            font-size: 1rem;
-            color: #555;
-        }
-        .testimonial {
-            background-color: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet"/>
 
-        .offcanvas-header {
-            background-color: #343a40;
-            color: white;
-        }
-        .offcanvas-body a {
-            text-decoration: none;
-            color: #212529;
-            font-weight: 500;
-            display: block;
-            margin: 10px 0;
-        }
-        .offcanvas-body a:hover {
-            color: #0d6efd;
-        }
-        .software-maintenance {
-            background-color: #f8f9fa;
-            padding: 40px 20px;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <!-- Left Side Menu Button -->
-            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                ☰ Menu
-            </button>
+      <div class="container-fluid">
+        <!-- Left Side Menu Button -->
+        <button
+          class="btn btn-light"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          ☰ Menu
+        </button>
 
-            <!-- Center Title -->
-            <a class="navbar-brand mx-auto" href="index.html">Code With Rifat</a>
+        <!-- Center Title -->
+        <a class="navbar-brand mx-auto" href="index.html">Code With Rifat</a>
 
-            <!-- Right Side Logo -->
-            <div class="d-flex">
-                <img src="assets/images/profile.jpg" alt="Logo" style="height: 40px; width: auto;">
-            </div>
+        <!-- Right Side Logo -->
+        <div class="d-flex">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Logo"
+            style="height: 40px; width: auto"
+          />
         </div>
+      </div>
     </nav>
 
     <!-- Offcanvas Drawer -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <nav>
-                <a href="index.html">🏠 Home</a>
-                <a href="post.html">📝 Post</a>
-                <a href="portfolio.html">🖼 Portfolio</a>
-                <a href="#about">👤 About</a>
-                <a href="contact.html">📞 Contact</a>
-            </nav>
-        </div>
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav>
+          <a href="index.html">🏠 Home</a>
+          <a href="post.html">📝 Post</a>
+          <a href="portfolio.html">🖼 Portfolio</a>
+          <a href="#about">👤 About</a>
+          <a href="contact.html">📞 Contact</a>
+        </nav>
+      </div>
     </div>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="container my-5">
-        <h2 class="text-center mb-4">My Portfolio</h2>
-        <div class="row">
-            <!-- Portfolio Item 1 -->
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <div class="p-3">
-                        <h5>Project 1: E-commerce Website</h5>
-                        <p>This is an e-commerce website where users can browse and buy products. Built with React and Node.js.</p>
-                    </div>
-                </div>
+      <h2 class="text-center mb-4">My Portfolio</h2>
+      <div class="row">
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-4">
+          <div class="portfolio-item">
+            <img src="project1.jpg" alt="Project 1" />
+            <div class="p-3">
+              <h5>Project 1: E-commerce Website</h5>
+              <p>
+                This is an e-commerce website where users can browse and buy
+                products. Built with React and Node.js.
+              </p>
             </div>
+          </div>
+        </div>
 
-            <!-- Portfolio Item 2 -->
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <div class="p-3">
-                        <h5>Project 2: Mobile App</h5>
-                        <p>A mobile app that helps users track their fitness goals. Developed using Flutter and Firebase.</p>
-                    </div>
-                </div>
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-4">
+          <div class="portfolio-item">
+            <img src="project2.jpg" alt="Project 2" />
+            <div class="p-3">
+              <h5>Project 2: Mobile App</h5>
+              <p>
+                A mobile app that helps users track their fitness goals.
+                Developed using Flutter and Firebase.
+              </p>
             </div>
+          </div>
+        </div>
 
-            <!-- Portfolio Item 3 -->
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <img src="project3.jpg" alt="Project 3">
-                    <div class="p-3">
-                        <h5>Project 3: Blog Website</h5>
-                        <p>A simple blog website where users can read and write posts. Built with WordPress and custom themes.</p>
-                    </div>
-                </div>
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-4">
+          <div class="portfolio-item">
+            <img src="project3.jpg" alt="Project 3" />
+            <div class="p-3">
+              <h5>Project 3: Blog Website</h5>
+              <p>
+                A simple blog website where users can read and write posts.
+                Built with WordPress and custom themes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Examination Result -->
+    <section class="exam-results">
+        <h2>My Exam Results</h2>
+
+        <!-- Result Python -->
+        <div class="result-card">
+            <img src="assets/images/mdrrifat297 (python).png" alt="Python Exam Result" class="result-image">
+            <div class="result-details">
+                <h3>Basics Python Test</h3>
+                <p>Score: <strong>83%</strong></p>
+                <p>Date: <em>01-12-2024</em></p>
+            </div>
+        </div>
+
+        <!-- Result Cpp -->
+        <div class="result-card">
+            <img src="assets/images/mdrrifat297 (c++).png" alt="C++ Exam Result" class="result-image">
+            <div class="result-details">
+                <h3>Basics C++ Test</h3>
+                <p>Score: <strong>86%</strong></p>
+                <p>Date: <em>02-12-2024</em></p>
+            </div>
+        </div>
+
+        <!-- Result C -->
+        <div class="result-card">
+            <img src="assets/images/mdrrifat297 (c).png" alt="C Exam Result" class="result-image">
+            <div class="result-details">
+                <h3>Basics C++ Test</h3>
+                <p>Score: <strong>86%</strong></p>
+                <p>Date: <em>03-12-2024</em></p>
+            </div>
+        </div>
+
+        <!-- Result Java -->
+        <div class="result-card">
+            <img src="assets/images/mdrrifat297 (java).png" alt="Java Exam Result" class="result-image">
+            <div class="result-details">
+                <h3>Basics Java Test</h3>
+                <p>Score: <strong>80%</strong></p>
+                <p>Date: <em>04-12-2024</em></p>
+            </div>
+        </div>
+
+        <!-- Result JavaScript -->
+        <div class="result-card">
+            <img src="assets/images/mdrrifat297 (javascript).png" alt="JavaScript Exam Result" class="result-image">
+            <div class="result-details">
+                <h3>Basics JavaScript Test</h3>
+                <p>Score: <strong>79%</strong></p>
+                <p>Date: <em>05-12-2024</em></p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="container my-5">
-        <h2 class="text-center mb-4">What My Clients Say</h2>
-        <div class="row">
-            <!-- Testimonial 1 -->
-            <div class="col-md-6">
-                <div class="testimonial">
-                    <p>"Rifat's work is exceptional! He helped me develop my e-commerce website on time and within budget. Highly recommended!"</p>
-                    <strong>- John Doe, CEO of E-Shop</strong>
-                </div>
-            </div>
 
-            <!-- Testimonial 2 -->
-            <div class="col-md-6">
-                <div class="testimonial">
-                    <p>"I am extremely happy with the mobile app he created for my fitness business. It’s easy to use and looks amazing!"</p>
-                    <strong>- Jane Smith, Fitness Expert</strong>
-                </div>
-            </div>
+    <!-- Profile Links Section -->
+    <section
+      id="profile-links"
+      style="background-color: #f8f9fa; padding: 40px 0"
+    >
+      <div style="text-align: center; margin-bottom: 20px">
+        <h2 style="color: #333; font-size: 28px; margin: 0">
+          My Programming Profiles
+        </h2>
+        <p style="color: #666; font-size: 16px">
+          Check out my coding activity and achievements!
+        </p>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+        "
+      >
+        <!-- Codeforces Profile -->
+        <div style="text-align: center; width: 120px">
+          <a
+            href="https://codeforces.com/profile/mdrrifat297"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/images/Codeforces.png"
+              alt="Codeforces"
+              style="width: 60px; height: 60px; border-radius: 50%"
+            />
+            <p style="margin-top: 10px; color: #333; font-weight: bold">
+              Codeforces
+            </p>
+          </a>
         </div>
+
+        <!-- LeetCode Profile -->
+        <div style="text-align: center; width: 120px">
+          <a
+            href="https://leetcode.com/u/mdrrifat297/"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/images/LeetCode.png"
+              alt="LeetCode"
+              style="width: 60px; height: 60px; border-radius: 50%"
+            />
+            <p style="margin-top: 10px; color: #333; font-weight: bold">
+              LeetCode
+            </p>
+          </a>
+        </div>
+
+        <!-- HackerRank Profile -->
+        <div style="text-align: center; width: 120px">
+          <a
+            href="https://www.hackerrank.com/profile/mdrrifat297"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/images/HackerRank.png"
+              alt="HackerRank"
+              style="width: 60px; height: 60px; border-radius: 50%"
+            />
+            <p style="margin-top: 10px; color: #333; font-weight: bold">
+              HackerRank
+            </p>
+          </a>
+        </div>
+
+        <!-- CodeChef Profile -->
+        <div style="text-align: center; width: 120px">
+          <a
+            href="https://www.codechef.com/users/mdrrifat297"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/images/Codechef.png"
+              alt="CodeChef"
+              style="width: 60px; height: 60px; border-radius: 50%"
+            />
+            <p style="margin-top: 10px; color: #333; font-weight: bold">
+              CodeChef
+            </p>
+          </a>
+        </div>
+
+        <!-- StackOverflow Profile -->
+        <div style="text-align: center; width: 120px">
+          <a
+            href="https://stackoverflow.com/users/28536117/mdrrifat297"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/images/StackOverflow.png"
+              alt="CodeChef"
+              style="width: 60px; height: 60px; border-radius: 50%"
+            />
+            <p style="margin-top: 10px; color: #333; font-weight: bold">
+              StackOverflow
+            </p>
+          </a>
+        </div>
+
+        <!-- Topcoder Profile -->
+        <div style="text-align: center; width: 120px">
+          <a
+            href="https://profiles.topcoder.com/mdrrifat297"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/images/Topcoder.png"
+              alt="CodeChef"
+              style="width: 60px; height: 60px; border-radius: 50%"
+            />
+            <p style="margin-top: 10px; color: #333; font-weight: bold">
+              Topcoder
+            </p>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <footer class="text-light" style="background-color: #343a40; padding: 40px 0;">
-        <div class="container">
-            <div class="row">
-                <!-- About Section -->
-                <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>
-                        Code With Rifat provides professional web development, app development, and software engineering services to meet your digital needs.
-                    </p>
-                </div>
+    <footer
+      class="text-light"
+      style="background-color: #343a40; padding: 40px 0"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-4">
+            <h5>About Us</h5>
+            <p>
+              Code With Rifat provides professional web development, app
+              development, and software engineering services to meet your
+              digital needs.
+            </p>
+          </div>
 
-                <!-- Quick Links -->
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-decoration-none text-light">🏠 Home</a></li>
-                        <li><a href="post.html" class="text-decoration-none text-light">📝 Post</a></li>
-                        <li><a href="portfolio.html" class="text-decoration-none text-light">🖼 Portfolio</a></li>
-                        <li><a href="contact.html" class="text-decoration-none text-light">📞 Contact</a></li>
-                    </ul>
-                </div>
+          <!-- Quick Links -->
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-decoration-none text-light"
+                  >🏠 Home</a
+                >
+              </li>
+              <li>
+                <a href="post.html" class="text-decoration-none text-light"
+                  >📝 Post</a
+                >
+              </li>
+              <li>
+                <a href="portfolio.html" class="text-decoration-none text-light"
+                  >🖼 Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-decoration-none text-light"
+                  >📞 Contact</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- Social Media Links -->
-                <div class="col-md-4">
-                    <h5>Follow Us</h5>
-                    <a href="https://www.facebook.com/mdrrifat297/" class="text-light me-3"><i class="bi bi-facebook"></i> Facebook</a><br>
-                    <a href="https://www.x.com/mdrrifat297/" class="text-light me-3"><i class="bi bi-twitter"></i> Twitter</a><br>
-                    <a href="https://www.linkedin.com/in/mdrrifat297/" class="text-light me-3"><i class="bi bi-linkedin"></i> LinkedIn</a><br>
-                    <a href="https://www.instagram.com/mdrrifat297" class="text-light"><i class="bi bi-instagram"></i> Instagram</a>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <hr class="border-light">
-            <div class="text-center pt-3">
-                <p class="mb-0">&copy; 2024 Code With Rifat | Designed with ❤️ and Bootstrap</p>
-            </div>
+          <!-- Social Media Links -->
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <a
+              href="https://www.facebook.com/mdrrifat297/"
+              class="text-light me-3"
+              ><i class="bi bi-facebook"></i> Facebook</a
+            ><br />
+            <a href="https://www.x.com/mdrrifat297/" class="text-light me-3"
+              ><i class="bi bi-twitter"></i> Twitter</a
+            ><br />
+            <a
+              href="https://www.linkedin.com/in/mdrrifat297/"
+              class="text-light me-3"
+              ><i class="bi bi-linkedin"></i> LinkedIn</a
+            ><br />
+            <a href="https://www.instagram.com/mdrrifat297" class="text-light"
+              ><i class="bi bi-instagram"></i> Instagram</a
+            >
+          </div>
         </div>
+
+        <!-- Copyright -->
+        <hr class="border-light" />
+        <div class="text-center pt-3">
+          <p class="mb-0">
+            &copy; 2024 Code With Rifat | Designed with ❤️ and Bootstrap
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap Icons CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
