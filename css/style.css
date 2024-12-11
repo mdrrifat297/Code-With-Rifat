@@ -1,78 +1,86 @@
+.navbar {
+    background: linear-gradient(to right, #41e17f, #5aaadc);
+}
+
 /* Custom CSS */
 .offcanvas-header {
     background-color: #343a40;
     color: white;
-  }
-  .offcanvas-body a {
+}
+
+.offcanvas-body a {
     text-decoration: none;
     color: #212529;
     font-weight: 500;
     display: block;
     margin: 10px 0;
-  }
-  .offcanvas-body a:hover {
+}
+
+.offcanvas-body a:hover {
     color: #0d6efd;
-  }
-  .software-maintenance {
+}
+
+.software-maintenance {
     background-color: #f8f9fa;
     padding: 40px 20px;
-  }
+}
 
-  #profile-links a:hover p {
+#profile-links a:hover p {
     color: #007bff;
     transition: color 0.3s ease;
-  }
+}
 
-  #profile-links img {
+#profile-links img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-  }
+}
 
-  #profile-links img:hover {
+#profile-links img:hover {
     transform: scale(1.1);
-  }
+}
 
-  footer {
+footer {
     background-color: #343a40;
     color: white;
     text-align: center;
     padding: 10px 0;
-  }
+}
 
-
-
-  .post-header {
+.post-header {
     text-align: center;
     margin-bottom: 30px;
-  }
-  .post-header h1 {
+}
+
+.post-header h1 {
     font-size: 2.5rem;
     color: #333;
-  }
-  .post-header .post-date {
+}
+
+.post-header .post-date {
     font-size: 1rem;
     color: #888;
-  }
-  .post-content p {
+}
+
+.post-content p {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.8;
-  }
-  .post-content ul {
+}
+
+.post-content ul {
     font-size: 1.1rem;
     color: #555;
-  }
-  .post-footer {
+}
+
+.post-footer {
     text-align: center;
     margin-top: 50px;
-  }
-  .pagination {
+}
+
+.pagination {
     justify-content: center;
-  }
+}
 
-
-
-/* Exam Results Section */
 /* Exam Results Section */
 .exam-results {
     max-width: 1200px;
@@ -90,57 +98,19 @@
 /* Result Card */
 .result-card {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* ensures content wraps on smaller screens */
 }
 
-.result-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Parent Container */
-.container {
-    display: flex;
-    flex-direction: column; /* Default: stack items vertically */
-    align-items: center; /* Center items horizontally */
-}
-
-/* Image Styling */
 .result-image {
-    width: 80%; /* 80% width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Add some spacing */
+    width: 70%; /* বড় ওয়েট */
+    height: 70%; /* ছোট হাইট */
+    margin-right: 1rem;
     border-radius: 8px;
+    object-fit: contain; /* ensures image fits within the dimensions */
 }
-
-/* Details Section Styling */
-.details {
-    width: 80%; /* Same width as image */
-    text-align: center; /* Center text */
-}
-
-/* Responsive Design for Small Screens */
-@media screen and (min-width: 768px) {
-    .container {
-        flex-direction: row; /* On larger screens, show image and details side by side */
-    }
-    .result-image {
-        width: 50%; /* Adjust width for larger screens */
-        margin-right: 10px;
-    }
-    .details {
-        width: 50%; /* Adjust width for details */
-        text-align: left; /* Align text to left */
-    }
-}
-
 
 .result-details {
     padding: 1rem;
@@ -159,32 +129,92 @@
     margin: 0.3rem 0;
 }
 
+/* On Tablet */
+@media (max-width: 768px) {
+    .exam-results {
+        padding: 1rem;
+    }
 
+    .exam-results h2 {
+        font-size: 1.5rem;
+    }
 
+    .result-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
+    .result-image {
+        width: 80%;
+        height: 80%;
+    }
+
+    .result-details h3 {
+        font-size: 1.25rem;
+    }
+
+    .result-details p {
+        font-size: 0.9rem;
+    }
+}
+
+/* On Phone */
+@media (max-width: 480px) {
+    .exam-results {
+        padding: 0.5rem;
+    }
+
+    .exam-results h2 {
+        font-size: 1.25rem;
+    }
+
+    .result-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .result-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .result-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .result-details p {
+        font-size: 0.85rem;
+    }
+}
 
 .portfolio-item {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 30px;
-  }
-  .portfolio-item img {
+}
+
+.portfolio-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
-  .portfolio-item h5 {
+}
+
+.portfolio-item h5 {
     font-size: 1.25rem;
     font-weight: bold;
-  }
-  .portfolio-item p {
+}
+
+.portfolio-item p {
     font-size: 1rem;
     color: #555;
-  }
-  .testimonial {
+}
+
+.testimonial {
     background-color: #f8f9fa;
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 30px;
-  }
+}
