@@ -105,12 +105,40 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Parent Container */
+.container {
+    display: flex;
+    flex-direction: column; /* Default: stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Image Styling */
 .result-image {
-    width: 75%;
-    height: auto;
-    object-fit: contain;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    width: 80%; /* 80% width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add some spacing */
+    border-radius: 8px;
+}
+
+/* Details Section Styling */
+.details {
+    width: 80%; /* Same width as image */
+    text-align: center; /* Center text */
+}
+
+/* Responsive Design for Small Screens */
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row; /* On larger screens, show image and details side by side */
+    }
+    .result-image {
+        width: 50%; /* Adjust width for larger screens */
+        margin-right: 10px;
+    }
+    .details {
+        width: 50%; /* Adjust width for details */
+        text-align: left; /* Align text to left */
+    }
 }
 
 
