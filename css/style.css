@@ -113,6 +113,23 @@
     border-bottom-left-radius: 8px;
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 768px) { /* For tablets and smaller devices */
+    .result-image {
+        width: 100%; /* Make the image take full width of its container */
+        height: auto; /* Adjust the height proportionally */
+        border-radius: 8px; /* Optional: Round corners for consistency */
+    }
+}
+
+@media screen and (max-width: 480px) { /* For mobile devices */
+    .result-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
 .result-details {
     padding: 1rem;
     text-align: left;
